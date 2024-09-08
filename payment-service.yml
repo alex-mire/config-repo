@@ -1,5 +1,5 @@
 payment-service:
-  test: "test-github22"
+  test: "test-github-test-3"
 keySetUri:
   value: ${KEY_SET_URI:http://localhost:8080}/as/oauth2/jwks
 springdoc:
