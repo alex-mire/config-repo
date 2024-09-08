@@ -1,2 +1,21 @@
 payment-service:
-  test: "test"
+  test: "test-local"
+keySetUri:
+  value: ${KEY_SET_URI:http://localhost:8080}/as/oauth2/jwks
+springdoc:
+  swagger-ui:
+    enabled: true
+    csrf:
+      enabled: false
+  api-docs:
+    enabled: true
+    groups:
+      enabled: true
+spring:
+  datasource:
+    username: ${DATA_SOURCE_USERNAME:user}
+    password: ${DATA_SOURCE_PASSWORD:password}
+    url: ${DATA_SOURCE_URL:jdbc:postgresql://localhost:5433/payment-service-db}
+    hikari:
+      connection-timeout: 2000
+      maximum-pool-size: 5
